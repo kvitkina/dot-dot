@@ -1,3 +1,5 @@
+import '../styles/index.scss';
+
 //drop-select
 const dropSelects = document.querySelectorAll('.form__item_type_select');
 
