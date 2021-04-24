@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>Точка-Точка</title>
+</head>
+<body>
+  <main class="page">
+    <section class="form">
+      <h1 class="form__title">FTL: Прямая машина</h1>
+      <form class="form__container">
+        <fieldset class="form__fieldset">
+          <div class="form__legend">
+            <div class="form__legend-number">1</div>
+            <h2 class="form__legend-title">Маршрут</h2>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="from">Откуда</label>
+            <input class="form__input" type="text" id="from" name="from" required>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="to">Куда</label>
+            <input class="form__input" type="text" id="to" name="to" required>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <div class="form__legend">
+            <div class="form__legend-number">2</div>
+            <h2 class="form__legend-title">Транспорт</h2>
+          </div>
+          <div class="form__fildset-container">
+            <div class="form__item form__item_type_select">
+              <label class="form__label" for="carrying">Грузоподъёмность</label>
+              <input class="form__input" type="text" id="carrying" name="carrying" placeholder="Не выбрана" readonly>
+              <svg class="form__input-icon" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0L4 3L7 0L8 1L4 5L0 1L1 0Z" fill="black"/>
+              </svg>
+              <ul class="form__list">
+                <li data-value="carrying-1" class="form__list-item">Вариант 1</li>
+                <li data-value="carrying-2" class="form__list-item">Вариант 2</li>
+                <li data-value="carrying-3" class="form__list-item">Вариант 3</li>
+                <li data-value="carrying-4" class="form__list-item">Вариант 4</li>
+                <li data-value="carrying-5" class="form__list-item">Вариант 5</li>
+              </ul>
+            </div>
+            <div class="form__item form__item_type_select">
+              <label class="form__label" for="method">Способ погрузки</label>
+              <input class="form__input" type="text" id="method" name="method" placeholder="Не выбран" readonly>
+              <svg class="form__input-icon" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0L4 3L7 0L8 1L4 5L0 1L1 0Z" fill="black"/>
+              </svg>
+              <ul class="form__list">
+                <li data-value="method-1" class="form__list-item">Вариант 1</li>
+                <li data-value="method-2" class="form__list-item">Вариант 2</li>
+                <li data-value="method-3" class="form__list-item">Вариант 3</li>
+                <li data-value="method-4" class="form__list-item">Вариант 4</li>
+                <li data-value="method-5" class="form__list-item">Вариант 5</li>
+              </ul>
+            </div>
+         </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <div class="form__legend">
+            <div class="form__legend-number">3</div>
+            <h2 class="form__legend-title">Груз</h2>
+          </div>
+          <div class="form__fildset-container form__fildset-container_type_cargo">
+            <div class="form__item form__item_type_select form__item_cargo">
+              <h3 class="form__label">Тип груза</h3>
+              <input class="form__input" type="text" name="cargo" placeholder="Не выбран" readonly>
+              <svg class="form__input-icon" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0L4 3L7 0L8 1L4 5L0 1L1 0Z" fill="black"/>
+              </svg>
+              <ul class="form__list">
+                <li data-value="carrying-1" class="form__list-item">Вариант 1</li>
+                <li data-value="carrying-2" class="form__list-item">Вариант 2</li>
+                <li data-value="carrying-3" class="form__list-item">Вариант 3</li>
+                <li data-value="carrying-4" class="form__list-item">Вариант 4</li>
+                <li data-value="carrying-5" class="form__list-item">Вариант 5</li>
+              </ul>
+            </div>
+            <div class="form__item form__item_type_select form__item_danger">
+              <h3 class="form__label">Класс опасности</h3>
+              <input class="form__input" type="text" name="danger" placeholder="Не выбран" readonly>
+              <svg class="form__input-icon" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0L4 3L7 0L8 1L4 5L0 1L1 0Z" fill="black"/>
+              </svg>
+              <ul class="form__list">
+                <li data-value="method-1" class="form__list-item">Вариант 1</li>
+                <li data-value="method-2" class="form__list-item">Вариант 2</li>
+                <li data-value="method-3" class="form__list-item">Вариант 3</li>
+                <li data-value="method-4" class="form__list-item">Вариант 4</li>
+                <li data-value="method-5" class="form__list-item">Вариант 5</li>
+              </ul>
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="value">Объявленная ценность, ₽</label>
+              <input class="form__input" type="number" id="value" name="value" placeholder="≥ 1" min="1" required>
+            </div>
+            <div class="form__checkbox">
+              <div class="form__checkbox-content">
+                <label class="form__checkbox-label" for="accept">
+                  <input class="form__checkbox-input" id="accept" type="checkbox">
+                  <svg class="form__checkbox-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5L9.49168 0L11 1.45455L4 8L0 3.93761L1.50832 2.48306L4 5Z" fill="white"/>
+                  </svg>
+                </label>
+              </div>
+              <p class="form__checkbox-title">Требуется температурный режим</p>
+            </div>
+              <div class="form__temperature">
+                <div class="form__item">
+                  <label class="form__label" for="from-temp">От, °C</label>
+                  <input class="form__input" type="text" id="from-temp" name="from-temp" value="-20" required>
+                </div>
+                <div class="form__item">
+                  <label class="form__label" for="to-temp">До, °C</label>
+                  <input class="form__input" type="text" id="to-temp" name="to-temp" value="+23" required>
+                </div>
+              </div>
+
+         </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <div class="form__legend">
+            <div class="form__legend-number">4</div>
+            <h2 class="form__legend-title">Время</h2>
+          </div>
+          <div class="form__item">
+            <label class="form__label">Когда прибыть в точку</label>
+            <div class="form__time-wrapper">
+              <input class="form__input form__input_time" type="text" name="from" placeholder="Адрес не указан" required>
+              <div class="form__input-circle"></div>
+              <button class="form__input-button">Не выбрано</button>
+            </div>
+            <div class="form__time-wrapper">
+              <input class="form__input form__input_time" type="text" name="from" placeholder="Адрес не указан" required>
+              <button class="form__input-button">Не выбрано</button>
+              <div class="form__input-circle"></div>
+            </div>
+            <p class="form__label form__label_caption">700 км в день</p>
+          </div>
+          <label class="form__label" for="comment">Комментарий к заказу</label>
+            <textarea class="form__input form__input_textarea" id="comment" name="comment" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу" required></textarea>
+        </fieldset>
+        <div class="form__prompt">
+          <p class="form__prompt-text">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
